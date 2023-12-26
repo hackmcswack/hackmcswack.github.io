@@ -56,7 +56,7 @@ h2 {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
 }
 
-.info2:hover {
+.info-languages:hover {
     transform: translateY(-2px); /* Slight lift effect on hover */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
 }
