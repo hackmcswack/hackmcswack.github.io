@@ -10,13 +10,13 @@ body {
     line-height: 1.6;
     color: #333;
     background-color: #f4f4f4;
-    padding: 20px;
+    padding: 0px;
 }
 
 header {
-    background: #333;
+    background: linear-gradient(45deg, #6CC1FF, #3D8EB9);
     color: white;
-    padding: 20px 0;
+    padding-bottom: 20px;
     text-align: center;
 }
 
@@ -31,7 +31,9 @@ header p {
 }
 
 section {
-    margin: 20px 0;
+    margin: 20px;
+    border-radius: 8px;
+    overflow: hidden;
 }
 
 h2 {
@@ -41,28 +43,103 @@ h2 {
     font-size: 1.5rem;
 }
 
-.job, .degree {
-    background-color: #e2e2e2;
-    padding: 15px;
-    margin: 15px 0;
+.info {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    margin: 15px;
+    border-left: 4px solid #3D8EB9;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.job h3, .degree h3 {
+.info:hover {
+    transform: translateY(-2px); /* Slight lift effect on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+.info2:hover {
+    transform: translateY(-2px); /* Slight lift effect on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+.info-languages {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    margin: 15px;
+    border-left: 4px solid #3D8EB9;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.info-languages * {
+    padding-left: 15px;
+}
+
+.info-image {
+    margin-top: 0px;
+    width: 70px;
+    height: auto;
+    margin-right: 20px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.info h3 {
     margin-top: 0;
 }
 
-.job-duration, .degree-duration {
-    font-style: italic;
-    font-size: 0.9rem;
+button {
+    background-color: #3D8EB9;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
 }
 
-.skills ul, .job ul {
-    list-style-type: square;
-    margin-left: 20px;
+button:hover {
+    background-color: #6CC1FF;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 20px;
+}
+
+#bio {
+    border-color: #3D8EB9;
+}
+
+#biodiv {
+    padding: 30px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    margin: 15px;
+    border-left: 4px solid #3D8EB9;
 }
 
 footer {
     text-align: center;
     padding: 20px 0;
     font-size: 0.8rem;
+    background: #333;
+    color: white;
+}
+
+
+@media (max-width: 768px) {
+    .info {
+        flex-direction: column; /* Stack image and text on smaller screens */
+        align-items: flex-start; /* Align to the start on smaller screens */
+    }
+
+    .info-image {
+        margin-right: 0;
+        margin-bottom: 10px; /* Space between image and text on smaller screens */
+    }
 }
